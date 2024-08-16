@@ -15,9 +15,11 @@ public class url_practice{
 
       try{
         String encodeurl= URLEncoder.encode(url, "UTF-8");
+        System.out.println("\nThe encoded url is:");
     System.out.println(encodeurl);
 
     String decodeurl=URLDecoder.decode(encodeurl,"UTF-8");
+    System.out.println("\nThe decoded url is:");
     System.out.println(decodeurl);
 
     
@@ -29,3 +31,5 @@ public class url_practice{
 
     }
 }
+
+//https://github.com/Aakashkandel?tab=repositories

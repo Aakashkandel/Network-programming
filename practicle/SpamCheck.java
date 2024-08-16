@@ -22,10 +22,14 @@ public class SpamCheck {
         try {
             InetAddress address = InetAddress.getByName(ip);
             byte[] quad = address.getAddress();
+            System.err.println(quad);
+            
+            
             String query = BLACKHOLE;
             for (byte octet : quad) {
                 int unsignedByte = octet < 0 ? octet + 256 : octet;
                 query = unsignedByte + "." + query;
+                System.out.println(query);
             }
             InetAddress.getByName(query);
             return true;
